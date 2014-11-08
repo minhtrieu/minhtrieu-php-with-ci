@@ -11,7 +11,8 @@ class User extends CI_Controller {
 
     public function register()
     {
-        $this->load->model("Users", "userModel");
+        $this->load->model("Users", "userModel"); //minhtrieu: alias Users to userModel. Then, userModel is used instead of Users.
+                                                    //purpose: for clear coding style:  after -> is lowcase char
         $errorMessage = '';
         if (isset($_POST['btnRegister'])) {
             // Processing registering new account
