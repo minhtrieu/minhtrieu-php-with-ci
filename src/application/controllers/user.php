@@ -196,6 +196,16 @@ class User extends CI_Controller {
             ));
         }
 
+        if (isset($_POST['btnUpdateAvatar'])) {
+            $config['upload_path'] = './images/avatars/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $config['overwrite'] = true;
+            $config['file_name'] = $this->session->userdata('id');
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('avatar');
+            var_dump($this->upload->data('avatar'));
+            die();
+        }
 
         //default: go here if there is no button is pushed
         if ($userId == 0) {
@@ -228,6 +238,9 @@ class User extends CI_Controller {
         $config['overwrite'] = true;
         $config['file_name'] =  $this->session->userdata('id');
         $this->load->library('upload', $config);
+        $this->upload->do_upload('avatar');
+        var_dump($this->upload->data()); die();
+
         if ( ! $this->upload->do_upload('avatar'))
         {
             $this->load->view("layout/layout", array(

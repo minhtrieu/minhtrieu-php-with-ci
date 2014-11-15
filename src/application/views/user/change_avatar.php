@@ -1,5 +1,6 @@
 <div class="container">
-    <form id="frmUpdateAvatar" action="/index.php/user/do_upload" method="POST" enctype="multipart/form-data">
+<!--    <form id="frmUpdateAvatar" action="/index.php/user/do_upload" method="POST" enctype="multipart/form-data">-->
+    <form id="frmUpdateAvatar" action="/index.php/user/userInfo" method="POST" enctype="multipart/form-data">
         <div class="sep"></div>
         <?php if ($errorMessage != '') : ?>
             <div>
