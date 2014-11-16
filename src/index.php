@@ -35,7 +35,7 @@ if (defined('ENVIRONMENT'))
 		case 'development':
 			error_reporting(E_ALL);
 		break;
-
+	
 		case 'testing':
 		case 'production':
 			error_reporting(0);
@@ -190,6 +190,11 @@ if (defined('ENVIRONMENT'))
 
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
+
+/**
+ * Set default timezone
+*/
+date_default_timezone_set("Asia/Bangkok");
 
 /*
  * --------------------------------------------------------------------
