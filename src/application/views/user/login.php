@@ -1,20 +1,16 @@
 <div class="container">
-    <form id="frmLogin" action="/index.php/user/login" method="POST">
+    <form id="frmLogin" action="<?php echo site_url("user/login"); ?>" method="POST">
         <div class="header">
             <h3>Sign In</h3>
-            <p>Please enter email and password to continue</p>
+            <?php if (isset($errorMessage) && $errorMessage != '' ) :?>
+                <?php echo "<p style='color: red'>" . $errorMessage . "</p>"; ?>
+            <?php else : ?>
+                <p>Please enter email and password to continue</p>
+            <?php endif ?>
         </div>
         <div class="sep"></div>
-        <?php if (isset($errorMessage) && $errorMessage != '') : ?>
-        <div>
-            <center>
-                <br />
-                <span style="color: red;"><?php echo $errorMessage ?></span>
-            </center>
-        </div>
-        <?php endif ?>
         <div class="inputs">
-            <input type="email" id="txtEmail" name="txtEmail" value="" placeholder="e-mail" autofocus autocomplete="OFF">
+            <input type="email" id="txtEmail" name="txtEmail" value="" placeholder="e-mail" autofocus >
             <input type="password" placeholder="Password" id="txtPassword" name="txtPassword" value="">
             <div class="checkboxy">
                 <input name="cecky" id="checky" value="1" type="checkbox" /><label class="terms">Remember me</label>

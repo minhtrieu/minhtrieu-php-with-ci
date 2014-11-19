@@ -2,7 +2,7 @@
     <div class="title">Welcome to our radio station</div>
     <p>
     <img src="/themes/phatnguyen/theme3/images/earphones.gif" alt="" title="" class="left_img" />
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    This is the place to share what you think and see what others think.
     </p>  
     <?php include(VIEW_PATH . "/tip/today_list.php");?>
     <div class="title">Photo Gallery</div>  
